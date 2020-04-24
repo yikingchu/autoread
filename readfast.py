@@ -30,21 +30,21 @@ def dododo(dododo_time):
     r=random.randint(1,9)
     rr=r+1
     url11='https://wk3.bookan.com.cn/?id=21025&#/magazine/5994/webp-6/526247/'+str(rr)
-    rr=r+1
+    rr=rr+1
     url12='https://wk3.bookan.com.cn/?id=21025&#/magazine/5994/webp-6/526247/'+str(rr)
-    rr=r+1
+    rr=rr+1
     url13='https://wk3.bookan.com.cn/?id=21025&#/magazine/5994/webp-6/526247/'+str(rr)
-    rr=r+1
+    rr=rr+1
     url14='https://wk3.bookan.com.cn/?id=21025&#/magazine/5994/webp-6/526247/'+str(rr)
-    rr=r+1
+    rr=rr+1
     url15='https://wk3.bookan.com.cn/?id=21025&#/magazine/5994/webp-6/526247/'+str(rr)
     r=random.randint(1,3)
     rr=33968+r*2
     url21='https://wk3.bookan.com.cn/?id=21025#/listen/63818/part/'+str(rr)
     r=random.randint(1,9)
-    rr=r+1
+    rr=rr+1
     url31='https://wk3.bookan.com.cn/?id=21025&read3_good=2#/book/83692/epub-1/454605/Text|Section000'+str(rr)+'.xhtml'  #精选书籍1
-    rr=r+1
+    rr=rr+1
     url32='https://wk3.bookan.com.cn/?id=21025&read3_good=2#/book/83692/epub-1/454605/Text|Section000'+str(rr)+'.xhtml'  #精选书籍
 
     urlend='https://read3.bookan.com.cn/21025?#/task'
