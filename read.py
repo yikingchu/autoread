@@ -35,8 +35,9 @@ def buy(buy_time):
     btn5='#twrap'  #读内容
 
     btn8='#twrap'  #下一页
-
-    btn6='#contentWrap > div.hotNotice > div > a'  #点击热门听书
+    url4='https://wk3.bookan.com.cn/?id=21025#/audio/828'
+    
+    btn6='#booksList > a:nth-child(1) > div > img'  #点击热门听书
 
     btn7='#app > div.routerWrap > div > div.listen-wrap > div.bot-wrap > div.botCtrl > div.btnCtrl > span.iconfont.ply'  #播放
     
@@ -73,18 +74,20 @@ def buy(buy_time):
                     time.sleep(60)
                     driver.find_element_by_css_selector(btn8).click()
                     time.sleep(60)
-                    driver.get(url2)
+                    driver.get(url4)
                     driver.find_element_by_css_selector(btn6).click()
                     time.sleep(0.5)
                     driver.find_element_by_css_selector(btn7).click()
                     time.sleep(620)
                     driver.get(url3)
                     driver.find_element_by_css_selector(btn9).click()
+                    time.sleep(60)
+                    driver.find_element_by_css_selector(btn8).click()
                     time.sleep(600)
                     print("完成刷分")
                 
         except:
-                    driver.get(url2)
+                    driver.get(url4)
                     driver.find_element_by_css_selector(btn6).click()
                     time.sleep(0.5)
                     driver.find_element_by_css_selector(btn7).click()
@@ -120,6 +123,8 @@ def buy(buy_time):
                     time.sleep(620)
                     driver.get(url3)
                     driver.find_element_by_css_selector(btn9).click()
+                    time.sleep(60)
+                    driver.find_element_by_css_selector(btn8).click()
                     time.sleep(600)
                     print("完成刷分")
  
