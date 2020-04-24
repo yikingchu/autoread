@@ -41,6 +41,7 @@ def dododo(dododo_time):
     r=random.randint(1,3)
     rr=33968+r*2
     url21='https://wk3.bookan.com.cn/?id=21025#/listen/63818/part/'+str(rr)
+
     r=random.randint(1,9)
     rr=rr+1
     url31='https://wk3.bookan.com.cn/?id=21025&read3_good=2#/book/83692/epub-1/454605/Text|Section000'+str(rr)+'.xhtml'  #精选书籍1
@@ -48,6 +49,10 @@ def dododo(dododo_time):
     url32='https://wk3.bookan.com.cn/?id=21025&read3_good=2#/book/83692/epub-1/454605/Text|Section000'+str(rr)+'.xhtml'  #精选书籍
 
     urlend='https://read3.bookan.com.cn/21025?#/task'
+
+
+    btnplay='#app > div.routerWrap > div > div.listen-wrap > div.bot-wrap > div.botCtrl > div.btnCtrl > span.iconfont.ply'  #播放
+    
 
 
 
@@ -69,6 +74,9 @@ def dododo(dododo_time):
                     print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')+":正在进行阅读第5篇文章："+url15)
                     time.sleep(150)
                     driver.get(url21)
+                    time.sleep(5)
+                    driver.find_element_by_css_selector(btnplay).click()
+                    time.sleep(5)
                     print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')+":正在随机听课："+url21)
                     time.sleep(620)
                     driver.get(url31)
@@ -99,6 +107,9 @@ def dododo(dododo_time):
                     print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')+":正在进行阅读第5篇文章："+url15)
                     time.sleep(150)
                     driver.get(url21)
+                    time.sleep(5)
+                    driver.find_element_by_css_selector(btnplay).click()
+                    time.sleep(5)
                     print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')+":正在随机听课："+url21)
                     time.sleep(620)
                     driver.get(url31)
