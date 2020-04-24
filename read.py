@@ -26,11 +26,11 @@ def login(url):
     
 def buy(buy_time):
  
-    url2='https://wk3.bookan.com.cn/?id=21025#/'
+    url2='https://wk3.bookan.com.cn/?id=21025#/magazine/54924'
     btn1='#footerBar > div.weui-tabbar > a.weui-tabbar__item.readRank'  #读书榜
        
 
-    btn4='#contentWrap > dl:nth-child(4) > dd > a:nth-child(1) > div > img'  #热门期刊第二篇
+    btn4='#booksList > a:nth-child(1) > div > img'   
 
     btn5='#twrap'  #读内容
 
@@ -52,6 +52,8 @@ def buy(buy_time):
 
     while True:
         try:
+                    driver.get(url2)
+                    time.sleep(5)
                     driver.find_element_by_css_selector(btn4).click()
                     time.sleep(0.5)
                     driver.find_element_by_css_selector(btn5).click()
@@ -86,16 +88,22 @@ def buy(buy_time):
                     time.sleep(600)
                     print("完成刷分")
                 
-        except:
+        except:    
                     driver.get(url4)
                     driver.find_element_by_css_selector(btn6).click()
                     time.sleep(0.5)
                     driver.find_element_by_css_selector(btn7).click()
                     time.sleep(620)
                     driver.get(url3)
+                    time.sleep(5)
                     driver.find_element_by_css_selector(btn9).click()
+                    time.sleep(60)
+                    driver.find_element_by_css_selector(btn8).click()
                     time.sleep(600)
-                    driver.get(url)
+                    driver.get(url2)
+                    time.sleep(5)
+                    driver.find_element_by_css_selector(btn4).click()
+                    time.sleep(5)
                     driver.find_element_by_css_selector(btn5).click()
                     time.sleep(5)
                     driver.find_element_by_css_selector(btn8).click()
