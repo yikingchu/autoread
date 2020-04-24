@@ -45,25 +45,14 @@ def buy(buy_time):
     btn9='#root > div > div.pageWrap > div > div.list > div:nth-child(1) > img'   #精选书籍
 
 
-    while True:
- 
-        if datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')>=buy_time:
-            try:
-             
-                if driver.find_element_by_css_selector(btn4):
-                    driver.find_element_by_css_selector(btn4).click()
-                    time.sleep(0.5)
-                    break
-            
-            except:
-                pass
+   
 
 
 
     while True:
         try:
-        
-            if driver.find_element_by_css_selector(btn5):
+                    driver.find_element_by_css_selector(btn4).click()
+                    time.sleep(0.5)
                     driver.find_element_by_css_selector(btn5).click()
                     time.sleep(5)
                     driver.find_element_by_css_selector(btn8).click()
@@ -95,6 +84,15 @@ def buy(buy_time):
                     print("完成刷分")
                 
         except:
+                    driver.get(url2)
+                    driver.find_element_by_css_selector(btn6).click()
+                    time.sleep(0.5)
+                    driver.find_element_by_css_selector(btn7).click()
+                    time.sleep(620)
+                    driver.get(url3)
+                    driver.find_element_by_css_selector(btn9).click()
+                    time.sleep(600)
+                    driver.get(url)
                     driver.find_element_by_css_selector(btn5).click()
                     time.sleep(5)
                     driver.find_element_by_css_selector(btn8).click()
